@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TipTop Awnings — Residential &amp; Business Awning Installation | Toronto &amp; GTA</title>
+<meta name="description" content="TipTop Awnings installs premium residential and business awnings across Toronto, York Region, Halton Region and Peel Region. Fair prices, expert install, 1 year warranty. Call (647) 405-8669.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #101214;
+    --ink-soft: #3A3F45;
+    --white: #FFFFFF;
+    --sky: #EAF4FA;
+    --sky-line: #D3E7F2;
+    --blue: #4FA8D8;
+    --blue-deep: #1E6E96;
+    --blue-mid: #2C8AC0;
+
+    --font-display: "Fraunces", Georgia, serif;
+    --font-body: "Inter", -apple-system, sans-serif;
+    --font-mono: "Space Mono", monospace;
+
+    --max: 1180px;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  img{ max-width:100%; display:block; }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--blue-deep);
+  }
+
+  h1,h2,h3{
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+  }
+
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 15px 26px;
+    border-radius: 2px;
+    border: 1.5px solid transparent;
+    transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  .btn-primary{ background: var(--ink); color: var(--white); }
+  .btn-primary:hover{ background: var(--blue-deep); }
+  .btn-outline{ background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-outline:hover{ border-color: var(--blue-deep); color: var(--blue-deep); }
+  .btn-sky{ background: var(--blue); color: var(--white); }
+  .btn-sky:hover{ background: var(--blue-deep); }
+
+  /* ===== SIGNATURE: FRAME-CORNER BRACKETS (aluminum awning framework) ===== */
+  .bracket{
+    position: relative;
+  }
+  .bracket::before, .bracket::after{
+    content:"";
+    position:absolute;
+    width: 22px; height: 22px;
+    border-color: var(--blue);
+    border-style: solid;
+    pointer-events:none;
+  }
+  .bracket::before{
+    top: -1px; left: -1px;
+    border-width: 2px 0 0 2px;
+  }
+  .bracket::after{
+    bottom: -1px; right: -1px;
+    border-width: 0 2px 2px 0;
+  }
+
+  /* ===== HEADER ===== */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--white);
+    border-bottom: 1px solid var(--sky-line);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 20px 0;
+  }
+  .logo{
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink);
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  .logo .mark{
+    width: 30px; height: 20px;
+    border: 2px solid var(--ink);
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+  }
+  .logo .mark::after{
+    content:"";
+    position:absolute;
+    left: -4px; right:-4px; bottom:-8px;
+    height: 8px;
+    background: repeating-linear-gradient(90deg, var(--blue) 0 6px, transparent 6px 12px);
+  }
+  .logo span{ color: var(--blue-deep); }
+  .nav-links{
+    display:flex;
+    gap: 34px;
+    align-items:center;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .nav-links a{ transition: color 0.15s ease; }
+  .nav-links a:hover{ color: var(--blue-deep); }
+  .nav-phone{
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--sky);
+    padding: 10px 16px;
+    border-radius: 2px;
+    display:flex;
+    align-items:center;
+    gap: 8px;
+    transition: background 0.2s ease;
+  }
+  .nav-phone:hover{ background: var(--sky-line); }
+
+  /* ===== HERO ===== */
+  .hero{
+    position: relative;
+    background: var(--white);
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  .hero-grid-bg{
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(var(--sky-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--sky-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 90%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 90%);
+    opacity: 0.9;
+  }
+  .hero-inner{
+    position: relative;
+    z-index: 2;
+    display:grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items:center;
+    padding: 72px 0 90px;
+  }
+  .hero h1{
+    font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+    margin: 20px 0 22px;
+  }
+  .hero h1 .accent{ color: var(--blue-deep); font-style: italic; font-weight: 500; }
+  .hero p.lede{
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin-bottom: 34px;
+  }
+  .hero-ctas{
+    display:flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .hero-facts{
+    display:flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--sky-line);
+    padding-top: 22px;
+  }
+  .hero-facts strong{
+    display:block;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* line-drawing awning illustration */
+  .awning-art{
+    position: relative;
+    height: 380px;
+  }
+  .awning-svg{ width: 100%; height: 100%; }
+
+  /* ===== TRUST STRIP ===== */
+  .trust{
+    background: var(--ink);
+    color: var(--white);
+  }
+  .trust-grid{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 34px 0;
+  }
+  .trust-item{
+    text-align:center;
+    padding: 0 20px;
+    border-left: 1px solid rgba(255,255,255,0.14);
+  }
+  .trust-item:first-child{ border-left: none; }
+  .trust-item .num{
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .trust-item .label{
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ===== SECTION GENERIC ===== */
+  section{ padding: 100px 0; }
+  .section-head{
+    max-width: 640px;
+    margin-bottom: 56px;
+  }
+  .section-head .eyebrow{ margin-bottom: 14px; display:block; }
+  .section-head h2{
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+  }
+  .section-head p{
+    margin-top: 16px;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+  }
+
+  /* ===== SERVICES ===== */
+  .services{ background: var(--sky); }
+  .service-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .service-card{
+    background: var(--white);
+    padding: 44px 38px;
+    border-radius: 3px;
+  }
+  .service-card .tag{
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue-deep);
+    margin-bottom: 18px;
+    display:block;
+    font-weight: 600;
+  }
+  .service-card h3{
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+  }
+  .service-card p{
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+    max-width: 42ch;
+  }
+  .service-card ul{
+    display:flex;
+    flex-direction:column;
+    gap: 11px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .service-card li{ display:flex; gap: 10px; align-items:flex-start; }
+  .service-card li::before{
+    content:"";
+    width: 6px; height: 6px;
+    background: var(--blue);
+    margin-top: 7px;
+    flex-shrink:0;
+  }
+
+  /* ===== WHY US ===== */
+  .why{ background: var(--white); }
+  .why-grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+  }
+  .why-item{
+    padding: 26px 22px 22px;
+    position: relative;
+  }
+  .why-item .num-tag{
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--blue-deep);
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .why-item h3{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .why-item p{ color: var(--ink-soft); font-size: 0.94rem; }
+
+  /* ===== PROCESS ===== */
+  .process{ background: var(--sky); }
+  .process-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .process-step{
+    background: var(--white);
+    padding: 30px 28px;
+    border-radius: 3px;
+  }
+  .process-step .step-num{
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--blue-deep);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .process-step h3{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .process-step p{ color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* ===== SERVICE AREA ===== */
+  .area{ background: var(--white); }
+  .area-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  .area-col{
+    border-top: 2px solid var(--blue);
+    padding-top: 20px;
+  }
+  .area-col h3{
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--blue-deep);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .area-col ul{
+    display:flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  /* ===== TESTIMONIAL ===== */
+  .quote-band{
+    background: var(--blue-deep);
+    color: var(--white);
+    text-align:center;
+    padding: 84px 0;
+  }
+  .quote-band blockquote{
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+    font-weight: 500;
+    max-width: 780px;
+    margin: 0 auto 22px;
+    line-height: 1.35;
+  }
+  .quote-band cite{
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  /* ===== CTA ===== */
+  .cta{
+    background: var(--white);
+    text-align:center;
+  }
+  .cta-box{
+    background: var(--ink);
+    color: var(--white);
+    border-radius: 4px;
+    padding: 64px 40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap: 20px;
+    position: relative;
+  }
+  .cta-box .eyebrow{ color: var(--blue); }
+  .cta-box h2{ color: var(--white); font-size: clamp(1.8rem, 3vw, 2.4rem); }
+  .cta-box p{ color: rgba(255,255,255,0.72); max-width: 50ch; }
+  .cta-phone{
+    font-family: var(--font-mono);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: 0.01em;
+    margin: 6px 0;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background: var(--white);
+    color: var(--ink-soft);
+    padding: 56px 0 30px;
+    border-top: 1px solid var(--sky-line);
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-logo{
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin-bottom: 12px;
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  footer h4{
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  footer ul{ display:flex; flex-direction:column; gap:9px; font-size: 0.92rem; }
+  footer ul a:hover{ color: var(--blue-deep); }
+  footer p{ font-size: 0.92rem; max-width: 40ch; }
+  .footer-bottom{
+    border-top: 1px solid var(--sky-line);
+    padding-top: 24px;
+    display:flex;
+    justify-content:space-between;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    color: #9AA1A8;
+    flex-wrap:wrap;
+    gap: 10px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px){
+    .hero-inner{ grid-template-columns: 1fr; padding-bottom: 60px; }
+    .awning-art{ height: 220px; order: -1; }
+    .trust-grid{ grid-template-columns: repeat(3,1fr); gap: 20px 0; }
+    .trust-item{ border-left:none; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 18px; }
+    .service-grid{ grid-template-columns: 1fr; }
+    .why-grid{ grid-template-columns: repeat(2,1fr); }
+    .process-grid{ grid-template-columns: 1fr; }
+    .area-grid{ grid-template-columns: repeat(2,1fr); }
+    .footer-grid{ grid-template-columns: 1fr; }
+    .nav-links{ display:none; }
+  }
+  @media (max-width: 560px){
+    .wrap{ padding: 0 20px; }
+    .why-grid{ grid-template-columns: 1fr; }
+    .area-grid{ grid-template-columns: 1fr; }
+    .hero-ctas{ flex-direction:column; align-items:stretch; }
+    .hero-facts{ gap: 20px; }
+    section{ padding: 64px 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .btn{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap">
+    <a href="#top" class="logo"><span class="mark"></span>TipTop <span>Awnings</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#area">Service Area</a>
+    </div>
+    <a href="tel:6474058669" class="nav-phone">☎ (647) 405-8669</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Residential &amp; Business Awnings — Toronto &amp; GTA</span>
+      <h1>Shade, framed <span class="accent">right</span>.</h1>
+      <p class="lede">We supply and install premium awnings — strong, stylish, and built to a proper standard. Great quality, fair prices, and a full 1&#8209;year warranty on every job.</p>
+      <div class="hero-ctas">
+        <a href="tel:6474058669" class="btn btn-primary">Call (647) 405-8669</a>
+        <a href="#services" class="btn btn-outline">See Our Services</a>
+      </div>
+      <div class="hero-facts">
+        <div><strong>1 Year</strong>Full Warranty</div>
+        <div><strong>We Bring</strong>The Awning</div>
+        <div><strong>WSIB &amp;</strong>Fully Insured</div>
+        <div><strong>GTA-Wide</strong>Toronto, York, Halton, Peel</div>
+      </div>
+    </div>
+    <div class="awning-art bracket" aria-hidden="true">
+      <svg class="awning-svg" viewBox="0 0 400 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- sky -->
+        <rect x="0" y="0" width="400" height="380" fill="#EAF4FA"/>
+        <!-- sun -->
+        <circle cx="336" cy="56" r="26" fill="#4FA8D8" opacity="0.9"/>
+        <g stroke="#4FA8D8" stroke-width="2" opacity="0.7">
+          <line x1="336" y1="8" x2="336" y2="20"/>
+          <line x1="336" y1="92" x2="336" y2="104"/>
+          <line x1="292" y1="56" x2="304" y2="56"/>
+          <line x1="368" y1="56" x2="380" y2="56"/>
+          <line x1="305" y1="25" x2="313" y2="33"/>
+          <line x1="359" y1="79" x2="367" y2="87"/>
+          <line x1="367" y1="25" x2="359" y2="33"/>
+          <line x1="313" y1="79" x2="305" y2="87"/>
+        </g>
+        <!-- house facade -->
+        <rect x="30" y="130" width="300" height="220" fill="#FFFFFF" stroke="#101214" stroke-width="2"/>
+        <!-- brick texture lines -->
+        <g stroke="#D3E7F2" stroke-width="1">
+          <line x1="30" y1="170" x2="330" y2="170"/>
+          <line x1="30" y1="210" x2="330" y2="210"/>
+          <line x1="30" y1="250" x2="330" y2="250"/>
+          <line x1="30" y1="290" x2="330" y2="290"/>
+          <line x1="30" y1="330" x2="330" y2="330"/>
+        </g>
+        <!-- door -->
+        <rect x="240" y="260" width="60" height="90" fill="#FFFFFF" stroke="#101214" stroke-width="2"/>
+        <circle cx="288" cy="308" r="2.5" fill="#101214"/>
+        <!-- window under awning -->
+        <rect x="60" y="230" width="120" height="80" fill="#EAF4FA" stroke="#101214" stroke-width="2"/>
+        <line x1="120" y1="230" x2="120" y2="310" stroke="#101214" stroke-width="1.5"/>
+        <line x1="60" y1="270" x2="180" y2="270" stroke="#101214" stroke-width="1.5"/>
+        <!-- retractable awning frame arms -->
+        <line x1="60" y1="222" x2="30" y2="170" stroke="#1E6E96" stroke-width="2"/>
+        <line x1="180" y1="222" x2="200" y2="170" stroke="#1E6E96" stroke-width="2"/>
+        <!-- awning canopy -->
+        <path d="M30,170 L200,170 L180,222 L60,222 Z" fill="#101214"/>
+        <path d="M30,170 L200,170 L195,182 L35,182 Z" fill="#4FA8D8"/>
+        <!-- valance scallops -->
+        <path d="M60,222 Q68,238 76,222 Q84,238 92,222 Q100,238 108,222 Q116,238 124,222 Q132,238 140,222 Q148,238 156,222 Q164,238 172,222 Q176,238 180,222" stroke="#101214" stroke-width="2" fill="none"/>
+        <!-- ground line -->
+        <line x1="0" y1="350" x2="400" y2="350" stroke="#101214" stroke-width="2"/>
+        <!-- small shrub -->
+        <circle cx="345" cy="335" r="16" fill="#4FA8D8" opacity="0.35"/>
+        <circle cx="360" cy="340" r="12" fill="#4FA8D8" opacity="0.35"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item">
+      <div class="num">Premium</div>
+      <div class="label">Quality Materials</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">Fair</div>
+      <div class="label">Transparent Pricing</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">1 Year</div>
+      <div class="label">Installation Warranty</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">Expert</div>
+      <div class="label">Certified Installers</div>
+    </div>
+    <div class="trust-item">
+      <div class="num">Covered</div>
+      <div class="label">WSIB &amp; Insured</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What We Install</span>
+      <h2>Awnings for your home, and your business</h2>
+      <p>Whichever kind of shade you need, we supply the awning ourselves — no need to source materials — and handle the entire installation from measurement to mount.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card bracket">
+        <span class="tag">Residential</span>
+        <h3>Patios, decks &amp; windows</h3>
+        <p>Retractable and fixed awnings sized to fit your patio, deck, or window, built to stand up to sun, wind, and rain.</p>
+        <ul>
+          <li>Retractable patio &amp; deck awnings</li>
+          <li>Fixed window and door awnings</li>
+          <li>Custom colours and frame finishes</li>
+          <li>Free on-site measurement</li>
+        </ul>
+      </div>
+      <div class="service-card bracket">
+        <span class="tag">Business</span>
+        <h3>Storefronts &amp; commercial spaces</h3>
+        <p>Durable commercial awnings that hold up to daily wear and give your storefront a sharp, professional look.</p>
+        <ul>
+          <li>Storefront &amp; entrance awnings</li>
+          <li>Restaurant patio covers</li>
+          <li>Reinforced commercial-grade frames</li>
+          <li>Flexible install scheduling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why TipTop</span>
+      <h2>What you get with every install</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item bracket">
+        <div class="num-tag">01</div>
+        <h3>Great quality</h3>
+        <p>Premium fabrics and hardware selected to hold their shape and colour season after season.</p>
+      </div>
+      <div class="why-item bracket">
+        <div class="num-tag">02</div>
+        <h3>Fair prices</h3>
+        <p>Straightforward quotes with no hidden fees, so you know exactly what you're paying for.</p>
+      </div>
+      <div class="why-item bracket">
+        <div class="num-tag">03</div>
+        <h3>1 year warranty</h3>
+        <p>Every installation is backed by a full year's warranty on workmanship and hardware.</p>
+      </div>
+      <div class="why-item bracket">
+        <div class="num-tag">04</div>
+        <h3>Strong &amp; stylish</h3>
+        <p>Built tough enough for Ontario weather, and designed to look sharp on any home or storefront.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2>From call to cover, in three steps</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">01 — Call &amp; Measure</div>
+        <h3>Free consultation</h3>
+        <p>Call us and we'll come measure your space and talk through sizing, style, and placement — no obligation.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02 — Choose &amp; Confirm</div>
+        <h3>Pick your awning</h3>
+        <p>We bring the awning — you choose the style, colour, and frame from our premium options, and we lock in a fair price.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03 — Install</div>
+        <h3>Expert installation</h3>
+        <p>Our installers mount it securely and correctly the first time, then walk you through care and operation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Where We Work</span>
+      <h2>Serving Toronto and the surrounding regions</h2>
+      <p>We install across the Greater Toronto Area, including every municipality in York, Halton, and Peel Region.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-col">
+        <h3>Toronto</h3>
+        <ul>
+          <li>Downtown &amp; East York</li>
+          <li>North York</li>
+          <li>Scarborough</li>
+          <li>Etobicoke</li>
+        </ul>
+      </div>
+      <div class="area-col">
+        <h3>York Region</h3>
+        <ul>
+          <li>Vaughan</li>
+          <li>Markham</li>
+          <li>Richmond Hill</li>
+          <li>Newmarket &amp; Aurora</li>
+        </ul>
+      </div>
+      <div class="area-col">
+        <h3>Halton Region</h3>
+        <ul>
+          <li>Oakville</li>
+          <li>Burlington</li>
+          <li>Milton</li>
+          <li>Halton Hills</li>
+        </ul>
+      </div>
+      <div class="area-col">
+        <h3>Peel Region</h3>
+        <ul>
+          <li>Mississauga</li>
+          <li>Brampton</li>
+          <li>Caledon</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="quote-band">
+  <div class="wrap">
+    <blockquote>"They brought the awning, measured everything perfectly, and it looks better than what we pictured. Fair price, no surprises."</blockquote>
+    <cite>— Residential customer, Toronto</cite>
+  </div>
+</div>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box bracket">
+      <span class="eyebrow">Ready When You Are</span>
+      <h2>Get your free quote today</h2>
+      <p>Tell us about your space and we'll take it from there — measurement, awning, and installation, all handled. Licensed, insured, and WSIB covered.</p>
+      <div class="cta-phone">(647) 405-8669</div>
+      <a href="tel:6474058669" class="btn btn-sky">Call Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><span class="mark"></span>TipTop Awnings</div>
+        <p>Residential and business awning installation across Toronto, York Region, Halton Region, and Peel Region. Great quality, fair prices, expert install — we bring the awning. Fully licensed, insured, and WSIB covered.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#area">Service Area</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6474058669">(647) 405-8669</a></li>
+          <li>Serving the Greater Toronto Area</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TipTop Awnings. All rights reserved.</span>
+      <span>Toronto · York · Halton · Peel</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
